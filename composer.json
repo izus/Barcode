@@ -1,0 +1,8 @@
+{
+        "name": "izus/Barcode",
+        "description": "Barcode Plugin for CakePHP 2+ based on the Barcode PHP component by Walter Cattebeke",
+        "type": "cakephp-plugin",
+        "require": {
+                "php": ">=5.3.0"
+        }
+}
