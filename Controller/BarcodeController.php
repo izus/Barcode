@@ -926,15 +926,16 @@ class BarcodeController extends BarcodeAppController {
 		
 		// simple hotlinking prevention
 		//-----------------------------
-		$there = $this->request->referer();
-		$here = Router::url('/',true);
-		
-		if($there != '/'){
-			if (strpos($there, $here) === false) {
-			    return false;
-			}	
+		if (is_null(Configure::read('Barcode.disallowHotlinking')) || Configure::read('Barcode.disallowHotlinking')) {
+			$there = $this->request->referer();
+			$here = Router::url('/',true);
+			
+			if($there != '/'){
+				if (strpos($there, $here) === false) {
+				    return false;
+				}	
+			}
 		}
-		
 		//-----------------------------
 
 

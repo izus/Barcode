@@ -2,7 +2,7 @@
 
 ## Barcode Plugin for CakePHP 2+
 
-### Plugin version: 1.2
+### Plugin version: 1.3
 
 **AUTHOR:** Lorenzo Maieru
 
@@ -38,6 +38,12 @@ echo $this->Barcode->display(1234567890,
 ```
 
 Check **BarcodeHelper::display** for a full list of options.
+
+This Plugin has a basic hotlinking prevention that can be disabled by setting the following in your **Config/bootstrap.php**:
+
+```php
+Configure::write('Barcode.disallowHotlinking', false);
+```
 
 
 
