@@ -3,7 +3,7 @@
 Barcode Plugin for CakePHP 2+
 =============================
 
-Plugin version: 1.0
+Plugin version: 1.1
 
 AUTHOR: Izus
 DATE: 20-March-2014

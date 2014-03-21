@@ -602,8 +602,8 @@ class BarcodeController extends BarcodeAppController {
 	}
 
 	private function interleaveChars($c1, $c2) {
-		$tmp1 = std25spec($c1);
-		$tmp2 = std25spec($c2);
+		$tmp1 = $this->std25spec($c1);
+		$tmp2 = $this->std25spec($c2);
 		$tmp = $tmp1 . $tmp2;
 		for ($i=0; $i<strlen($tmp1); $i++) {
 			$tmp[$i*2] = $tmp1[$i];
@@ -946,8 +946,7 @@ class BarcodeController extends BarcodeAppController {
 	*/	
 		
 		$this->layout = false;
-
-
+		
 		// simple hotlinking prevention
 		//-----------------------------
 		$there = $this->request->referer();
@@ -961,18 +960,18 @@ class BarcodeController extends BarcodeAppController {
 		
 		//-----------------------------
 
-		
-		//$p_bcType = $_REQUEST['p_bcType'];
-		//$p_text= $_REQUEST['p_text'];
-		$p_xDim= $_REQUEST['p_xDim'];
-		$p_w2n= $_REQUEST['p_w2n'];
-		$p_charGap= $_REQUEST['p_charGap'];
-		$p_invert= $_REQUEST['p_invert'];
-		$p_charHeight= $_REQUEST['p_charHeight'];
-		$p_type= $_REQUEST['p_type'];
-		$p_label= $_REQUEST['p_label'];
-		$p_rotAngle= $_REQUEST['p_rotAngle'];
-		$p_checkDigit= $_REQUEST['p_checkDigit'];
+
+		$p_bcType= $this->params->named['p_bcType'];
+		$p_text= $this->params->named['p_text'];
+		$p_xDim= $this->params->named['p_xDim'];
+		$p_w2n= $this->params->named['p_w2n'];
+		$p_charGap= $this->params->named['p_charGap'];
+		$p_invert= $this->params->named['p_invert'];
+		$p_charHeight= $this->params->named['p_charHeight'];
+		$p_type= $this->params->named['p_type'];
+		$p_label= $this->params->named['p_label'];
+		$p_rotAngle= $this->params->named['p_rotAngle'];
+		$p_checkDigit= $this->params->named['p_checkDigit'];
 		
 		// default values
 		if (!isset($p_text)){
