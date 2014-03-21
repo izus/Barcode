@@ -946,6 +946,21 @@ class BarcodeController extends BarcodeAppController {
 	*/	
 		
 		$this->layout = false;
+
+
+		// simple hotlinking prevention
+		//-----------------------------
+		$there = $this->request->referer();
+		$here = Router::url('/',true);
+		
+		if($there != '/'){
+			if (strpos($there, $here) === false) {
+			    return false;
+			}	
+		}
+		
+		//-----------------------------
+
 		
 		//$p_bcType = $_REQUEST['p_bcType'];
 		//$p_text= $_REQUEST['p_text'];
