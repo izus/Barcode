@@ -17,7 +17,7 @@ This plugin allows you to generate the corresponding image to a given barcode an
 
 #### Installation
 
-Add the plugin to the controller helpers:
+Add the plugin to the helpers list of the Controller you want to use it in:
 
 ```php
 public $helpers = array('Barcode.Barcode'); 
@@ -25,7 +25,7 @@ public $helpers = array('Barcode.Barcode');
 
 #### Usage
 
-Use it like so:
+You can print the barcode to your view by adding the following line:
 
 ```php
 echo $this->Barcode->display(1234567890);
