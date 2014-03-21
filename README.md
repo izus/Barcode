@@ -8,7 +8,7 @@
 
 **License Type:** MIT
 
-Based on the Barcode PHP image generation component by **Walter Cattebeke**
+Based on the Barcode Generator by **Walter Cattebeke**
 
 
 #### What is it?
