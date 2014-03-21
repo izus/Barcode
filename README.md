@@ -1,38 +1,37 @@
-
 ## Barcode Plugin for CakePHP 2+
 
 ### Plugin version: 1.3
 
-**AUTHOR:** Lorenzo Maieru
+**Author:** Lorenzo Maieru
 
-**DATE:** 21-March-2014
+**Last Update:** 21-March-2014
 
-**LICENSE:** MIT
+**License Type:** MIT
 
-*Based on the Barcode PHP image generation component by **Walter Cattebeke***
+Based on the Barcode PHP image generation component by **Walter Cattebeke**
 
 
-**What is it?**
+#### What is it?
 
-this plugin allows you to generate the corresponding image to a given barcode and insert it in your view.
+This plugin allows you to generate the corresponding image to a given barcode and insert it in your view.
 
-**Installation**
+#### Installation
 
-add the plugin to the controller helpers:
+Add the plugin to the controller helpers:
 
 ```php
 public $helpers = array('Barcode.Barcode'); 
 ```
 
-**Usage**
+#### Usage
 
-use it like so:
+Use it like so:
 
 ```php
 echo $this->Barcode->display(1234567890);
 ```
 
-you can also pass it an optional array with extra paremeters:
+You can also pass it an optional array with extra paremeters:
 
 ```php
 echo $this->Barcode->display(1234567890, 
@@ -44,6 +43,7 @@ echo $this->Barcode->display(1234567890,
 ```
 
 Check **BarcodeHelper::display** for a full list of options.
+
 
 This Plugin has a basic hotlinking prevention that can be disabled by setting the following in your **Config/bootstrap.php**:
 
