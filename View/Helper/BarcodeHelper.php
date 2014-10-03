@@ -2,13 +2,11 @@
 
 App::uses('AppHelper', 'View/Helper');
 
-
-
 class BarcodeHelper extends AppHelper {
 
 	public $helpers = array('Html');
 
-	public function display($code, $options = array() ){
+	public function display($code, $options = array(), $attr = array()) {
 
 		$p_textUnenc = $code;
 		$p_text = rawurlencode($p_textUnenc);
@@ -43,7 +41,8 @@ class BarcodeHelper extends AppHelper {
 
 		 );	
 		
-		return $this->Html->image($dest, array('alt' => strtoupper($code) ));
+		$attr['alt'] = strtoupper($code);
+		return $this->Html->image($dest, $attr);
 	}	
 	
 }
