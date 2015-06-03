@@ -1,26 +1,25 @@
 <?php
+/**
+ * defs
+ */
+define("BC_TYPE_CODE39", 1);
+define("BC_TYPE_INTER25", 2);
+define("BC_TYPE_STD25", 3);
+define("BC_TYPE_CODE93", 4);
+define("BC_TYPE_ROYMAIL4", 5);
+define("BC_TYPE_POSTNET", 6);
 
-	define("BC_TYPE_CODE39", 1);
-	define("BC_TYPE_INTER25", 2);
-	define("BC_TYPE_STD25", 3);
-	define("BC_TYPE_CODE93", 4);
-	define("BC_TYPE_ROYMAIL4", 5);
-	define("BC_TYPE_POSTNET", 6);
+define("BC_IMG_TYPE_PNG", 1);
+define("BC_IMG_TYPE_JPG", 2);
+define("BC_IMG_TYPE_GIF", 3);
+define("BC_IMG_TYPE_WBMP", 4);
 
-	define("BC_IMG_TYPE_PNG", 1);
-	define("BC_IMG_TYPE_JPG", 2);
-	define("BC_IMG_TYPE_GIF", 3);
-	define("BC_IMG_TYPE_WBMP", 4);
-
-	define("BC_ROTATE_0", 0);
-	define("BC_ROTATE_90", 1);
-	define("BC_ROTATE_180", 2);
-	define("BC_ROTATE_270", 3);
+define("BC_ROTATE_0", 0);
+define("BC_ROTATE_90", 1);
+define("BC_ROTATE_180", 2);
+define("BC_ROTATE_270", 3);
 
 class BarcodeController extends BarcodeAppController {
-	
-	/* defs */
-	
 
 	private function getBarcodeText($i, $txt){
 		switch ($i) {

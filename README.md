@@ -1,11 +1,8 @@
 ## Barcode Plugin for CakePHP 2+
 
-### Plugin version: 1.3
+### Plugin version: 1.4.0
 
-**Author:** Lorenzo Maieru
-
-**Last Update:** 21-March-2014
-
+**Original Author:** Lorenzo Maieru
 **License Type:** MIT
 
 Based on the Barcode Generator by **Walter Cattebeke**
