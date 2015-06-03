@@ -2,7 +2,7 @@
 
 ### Plugin version: 1.4.0
 
-** Original Author:** Lorenzo Maieru
+**Original Author:** Lorenzo Maieru
 **License Type:** MIT
 
 Based on the Barcode Generator by **Walter Cattebeke**
